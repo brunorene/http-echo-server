@@ -25,7 +25,7 @@ server.on('connection', function (c) {
         c.end()
       }, 2000)
     }
-    c.write(chunk.toString())
+    //c.write(chunk.toString())
   })
   c.on('end', function () {
     console.log('[connection] event: end')
