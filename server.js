@@ -19,12 +19,11 @@ server.on('connection', function (c) {
       c.write('Connection: close\n')
       c.write('Content-Type: text/plain\n')
       c.write('\n')
-      c.write('[accepted]')
-      c.write('\n')
       setTimeout(function () {
         c.end()
       }, 2000)
     }
+    c.write('[accepted]')
     //c.write(chunk.toString())
   })
   c.on('end', function () {
